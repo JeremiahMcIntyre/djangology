@@ -1,0 +1,1 @@
+Djangology placeholder project
