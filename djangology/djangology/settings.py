@@ -72,6 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangology.wsgi.application'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
