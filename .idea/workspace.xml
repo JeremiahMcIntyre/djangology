@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34543f4d-32a0-4ad5-a732-5f8698a47fb8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/media/djangology.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/templates/player/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/templates/player/play_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangology/player/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/djangology.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangology.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangology/djangology/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/djangology/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangology/djangology/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/djangology/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
