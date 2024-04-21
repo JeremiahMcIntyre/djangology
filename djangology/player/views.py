@@ -5,10 +5,10 @@ from django.conf import settings
 import os
 
 def login(request):
-    return render(request, 'authentication/login.html')
+    return render(request, 'player/login.html')
 
 def play_page(request):
-    return render(request, 'authentication/play_page.html')
+    return render(request, 'player/play_page.html')
 
 def play_song(request, song_name):
     song_path = os.path.join(settings.MEDIA_ROOT, song_name)
