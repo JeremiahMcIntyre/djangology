@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-61_@9n%pe-lle38!cmy(kw=3pu*wwrs8q$9nfz#n08_u#@qt=j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-18-226-166-86.us-east-2.compute.amazonaws.com']
+
+ALLOWED_HOSTS = ['ec2-18-226-166-86.us-east-2.compute.amazonaws.com',
+                 '127.0.0.1']
+
+
 
 
 
@@ -38,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'player'
 ]
 
 MIDDLEWARE = [
@@ -69,6 +74,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangology.wsgi.application'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # Database
