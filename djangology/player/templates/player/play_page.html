@@ -5,38 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <style>
-        .header {
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .profile-container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .profile-details {
-            margin-bottom: 20px;
-        }
-        .profile-details h2 {
-            margin-bottom: 10px;
-        }
-        .song-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .song-list li {
-            margin-bottom: 10px;
-        }
-        .song-list a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        .song-list a:hover {
-            text-decoration: underline;
-        }
+        /* Your CSS styles */
     </style>
 </head>
 <body>
@@ -44,7 +13,7 @@
     <div class="profile-container">
         <div class="profile-details">
             <h2>User:</h2>
-            <p>Name: Jim Pasta</p>
+            <p>Name: {{ user_name }}</p>  <!-- Displaying user's name dynamically -->
         </div>
         <div class="song-list">
             <h2>Playlist:</h2>
@@ -57,11 +26,10 @@
         <div class="music-player">
             <h2>Music Player</h2>
             <audio controls>
-            <source src="{% url 'play_song' 'djangology.mp3' %}" type="audio/mpeg">
-            Your browser does not support the audio element.
+                <source src="{% url 'play_song' 'djangology.mp3' %}" type="audio/mpeg">
+                Your browser does not support the audio element.
             </audio>
-</div>
-
+        </div>
     </div>
 </body>
 </html>

@@ -84,8 +84,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'streamingService',
+        'USER': 'djangology_remote',
+        'PASSWORD': 'password',
+        'HOST':'ec2-18-226-166-86.us-east-2.compute.amazonaws.com',
+        'PORT':'3306',
     }
 }
 
