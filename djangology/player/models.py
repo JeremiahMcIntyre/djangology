@@ -18,20 +18,22 @@ class Albums(models.Model):
 
 
 class Following(models.Model):
-    userIdFk = models.IntegerField(primary_key=True)
-    followsIdFk = models.IntegerField(primary_key=True)
+    userIdFk = models.IntegerField()
+    followsIdFk = models.IntegerField()
 
     class Meta:
         db_table = 'following'
+        unique_together = (('userIdFk', 'followsIdFk'),)
 
 
 class Likes(models.Model):
-    userIdFk = models.IntegerField(primary_key=True)
-    trackIdFk = models.IntegerField(primary_key=True)
-    likeDateTime = models.DateTimeField(primary_key=True, auto_now_add=True)
+    userIdFk = models.IntegerField()
+    trackIdFk = models.IntegerField()
+    likeDateTime = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         db_table = 'likes'
+        unique_together = (('userIdFk', 'trackIdFk', 'likeDateTime'),)
 
 
 class Playlists(models.Model):
@@ -40,7 +42,7 @@ class Playlists(models.Model):
     playlistDuration = models.CharField(max_length=10, null=True)
     playlistId = models.AutoField(primary_key=True)
     playlistName = models.CharField(max_length=50)
-    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    user = models.ForeignKey('Users', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.playlistName
@@ -87,10 +89,11 @@ class Users(models.Model):
         db_table = 'users'
 
 
-class UserTracks(models.Model):
-    userIdFk = models.IntegerField(primary_key=True)
-    trackIdFk = models.IntegerField(primary_key=True)
-    playDateTime = models.DateTimeField(primary_key=True, auto_now_add=True)
+class UserTrack(models.Model):
+    userIdFk = models.IntegerField()
+    trackIdFk = models.IntegerField()
+    playDateTime = models.DateTimeField()
 
     class Meta:
         db_table = 'userTracks'
+        unique_together = (('userIdFk', 'trackIdFk', 'playDateTime'),)
