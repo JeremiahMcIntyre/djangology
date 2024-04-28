@@ -43,12 +43,17 @@
         .form-group button:hover {
             background-color: #0056b3;
         }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="header">Djangology</div>
     <div class="form-container">
-        <form method="post" action="{% url 'play_page' %}">
+        <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
             <div class="form-group">
                 <label for="id_username">Username:</label>
@@ -62,6 +67,11 @@
                 <button type="submit">Login</button>
             </div>
         </form>
+         {% if messages %}
+        <div class="error-message">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
     </div>
-</body>
-</html>

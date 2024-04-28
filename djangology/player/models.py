@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import BaseUserManager
 
 
 class Albums(models.Model):
@@ -76,11 +77,24 @@ class Tracks(models.Model):
         db_table = 'tracks'
 
 
+
+class UserManager(BaseUserManager):
+    def create_user(self, username, user_display_name, password=None):
+        if not username:
+            raise ValueError('The Username field must be set')
+        user = self.model(username=username, user_display_name=user_display_name)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
 class Users(models.Model):
     password = models.CharField(max_length=25)
     userId = models.AutoField(primary_key=True)
     userDisplayName = models.CharField(max_length=25)
     username = models.CharField(max_length=25)
+
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['userId', 'password', 'username', 'userDisplayName']
 
     def __str__(self):
         return self.username
