@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34543f4d-32a0-4ad5-a732-5f8698a47fb8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangology/djangology/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/djangology/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangology/player/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/player/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangology/player/templates/player/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/player/templates/player/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangology/player/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/player/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="34543f4d-32a0-4ad5-a732-5f8698a47fb8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +65,7 @@
       <workItem from="1713916590495" duration="5284000" />
       <workItem from="1713923736271" duration="4055000" />
       <workItem from="1714080826467" duration="11765000" />
+      <workItem from="1714335829415" duration="654000" />
     </task>
     <servers />
   </component>
