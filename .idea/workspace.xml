@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34543f4d-32a0-4ad5-a732-5f8698a47fb8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/djangology/player/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangology/player/static/css/playlists.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangology/player/templates/player/playlists.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangology/player/templates/player/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/player/templates/player/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangology/player/templates/player/play_page.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
