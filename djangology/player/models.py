@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 
 class Albums(models.Model):
@@ -16,6 +16,18 @@ class Albums(models.Model):
 
     class Meta:
         db_table = 'albums'
+
+class CustomUserManager(BaseUserManager):
+    def create_user(self, username, password=None, userDisplayName=None, **extra_fields):
+        if not username:
+            raise ValueError('The username must be set')
+        user = self.model(username=username, user_display_name=userDisplayName)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def get_by_natural_key(self, username):
+        return self.get(username=username)
 
 
 class Following(models.Model):
@@ -78,23 +90,17 @@ class Tracks(models.Model):
 
 
 
-class UserManager(BaseUserManager):
-    def create_user(self, username, user_display_name, password=None):
-        if not username:
-            raise ValueError('The Username field must be set')
-        user = self.model(username=username, user_display_name=user_display_name)
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
 
-class Users(models.Model):
+class Users(AbstractBaseUser):
     password = models.CharField(max_length=25)
     userId = models.AutoField(primary_key=True)
     userDisplayName = models.CharField(max_length=25)
-    username = models.CharField(max_length=25)
+    username = models.CharField(max_length=25, unique=True)
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['userId', 'password', 'username', 'userDisplayName']
+    REQUIRED_FIELDS = ['userId', 'password', 'userDisplayName']
+
+    objects = CustomUserManager()
 
     def __str__(self):
         return self.username
