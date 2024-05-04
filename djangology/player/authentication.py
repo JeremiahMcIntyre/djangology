@@ -4,14 +4,19 @@ from .models import Users
 class CustomAuthBackend(BaseBackend):
     def authenticate(self, request, username=None, password=None):
         try:
+            print(f'Username is {username}')
+            print(f'password is {password}')
+            print(f'objects is {Users.objects}')
             user = Users.objects.get(username=username)
-            if user.check_password(password):
+            print(f'Username: {user.username} Password:{user.password}')
+            print(f'Check is {user.check_password(password)}')
+            if user.password == password:
                 return user
         except Users.DoesNotExist:
             return None
 
-    def get_user(self, user_id):
+    def get_user(self, userId):
         try:
-            return Users.objects.get(pk=user_id)
+            return Users.objects.get(pk=userId)
         except Users.DoesNotExist:
             return None

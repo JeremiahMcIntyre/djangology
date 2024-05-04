@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 
+
 class Albums(models.Model):
     albumId = models.AutoField(primary_key=True)
     albumCoverPath = models.CharField(max_length=200, null=True)
@@ -101,6 +102,7 @@ class Users(AbstractBaseUser):
     REQUIRED_FIELDS = ['userId', 'password', 'userDisplayName']
 
     objects = CustomUserManager()
+
 
     def __str__(self):
         return self.username

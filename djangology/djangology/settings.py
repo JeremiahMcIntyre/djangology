@@ -115,8 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTH_USER_MODEL = 'player.Users'
 
 AUTHENTICATION_BACKENDS = [
-    'player.authentication.CustomAuthBackend',
-    'django.contrib.auth.backends.ModelBackend',
+    'player.authentication.CustomAuthBackend'
 ]
 
 # Internationalization

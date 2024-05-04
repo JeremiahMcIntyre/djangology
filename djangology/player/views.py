@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as auth_login
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import FileResponse
@@ -7,13 +7,18 @@ from .models import Users
 
 import os
 
-def login(request):
+def log_in(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
+        print("Username from form:", username)
+        print("Password from form:", password)
         user = authenticate(request, username=username, password=password)
+        print(user)
         if user is not None:
-            login(request, user)
+            print("Username from model:", user.username)
+            print("Password from model:", user.password)
+            auth_login(request, user)
             return redirect('play_page')
         else:
             messages.error(request, 'Invalid username or password.')
