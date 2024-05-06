@@ -1,0 +1,27 @@
+/* login.css */
+
+body {
+    background-color: rgb(0, 25, 51);
+    color: white; /* Change text color to white */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(255, 204, 0);
+}
+
+h2 {
+    color: rgb(153, 0, 0);
+}
+
+.login-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}

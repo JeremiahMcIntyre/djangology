@@ -19,8 +19,8 @@ def log_in(request):
             messages.error(request, 'Invalid username or password.')
     return render(request, 'player/login.html')
 
-def play_page(request):
-    return render(request, 'player/play_page.html')
+def playlists(request):
+    return render(request, 'player/playlists.html')
 
 def play_song(request, song_name):
     song_path = os.path.join(settings.MEDIA_ROOT, song_name)
