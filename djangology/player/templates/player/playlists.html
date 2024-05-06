@@ -26,9 +26,12 @@
                 <h2>Playlist 3</h2>
                 <!-- Add more playlists as needed -->
             </div>
-            <div class="playlist-details">
-                <h2>Playlist Details</h2>
-                <p>Playlist details will appear here.</p>
+             <div class="playlist-details">
+                <h2>Music Player</h2>
+                <audio controls>
+                    <source src="{% url 'play_song' 'djangology.mp3' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </div>
     </main>
