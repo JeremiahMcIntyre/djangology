@@ -25,3 +25,7 @@ h2 {
     border-radius: 8px;
     margin-top: 20px;
 }
+
+.error-message {
+    color: red;
+}

@@ -14,7 +14,7 @@ def log_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             auth_login(request, user)
-            return redirect('play_page')
+            return redirect('playlists')
         else:
             messages.error(request, 'Invalid username or password.')
     return render(request, 'player/login.html')
@@ -26,7 +26,3 @@ def play_song(request, song_name):
     song_path = os.path.join(settings.MEDIA_ROOT, song_name)
     return FileResponse(open(song_path, 'rb'), content_type='audio/mpeg')
 
-def play_page(request):
-    user = Users.objects.get(userId=1)
-    context = {'user_name': user.userDisplayName}
-    return render(request, 'player/play_page.html', context)
