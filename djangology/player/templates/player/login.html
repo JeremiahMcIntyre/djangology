@@ -9,9 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to</h1>
-        <h2>Djangology</h2>
-        <h1>Join today to discover your next favorite song.</h1>
+        <h1 class="header-title">Welcome to Djangology</h1>
+        <h2>Make Music With Your Friends Around the World</h2>
         <div class="login-box">
             <h2>Login</h2>
             <form id="login-form" action="{% url 'playlists' %}" method="post">
@@ -24,6 +23,14 @@
 
                 <button type="submit" id="login-button">Login</button>
             </form>
+            <div class="error-message">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            <div class="signup">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
         </div>
     </div>
 
