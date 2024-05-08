@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34543f4d-32a0-4ad5-a732-5f8698a47fb8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/djangology/player/templates/player/playlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/player/templates/player/playlists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangology/djangology/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangology/djangology/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,13 @@
       <workItem from="1712285454673" duration="6477000" />
       <workItem from="1712422780770" duration="60000" />
       <workItem from="1712422842377" duration="3539000" />
-      <workItem from="1713735002687" duration="614000" />
+      <workItem from="1713735002687" duration="3689000" />
+      <workItem from="1713916590495" duration="5284000" />
+      <workItem from="1713923736271" duration="4055000" />
+      <workItem from="1714080826467" duration="11765000" />
+      <workItem from="1714335829415" duration="654000" />
+      <workItem from="1714506256452" duration="4985000" />
+      <workItem from="1714843596531" duration="4583000" />
     </task>
     <servers />
   </component>
