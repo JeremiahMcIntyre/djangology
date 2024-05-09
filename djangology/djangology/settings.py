@@ -19,9 +19,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'player', 'static'),
 ]
-
 
 
 
@@ -129,7 +128,6 @@ AUTH_USER_MODEL = 'player.Users'
 
 AUTHENTICATION_BACKENDS = [
     'player.authentication.CustomAuthBackend',
-    'django.contrib.auth.backends.ModelBackend',
 ]
 
 # Internationalization

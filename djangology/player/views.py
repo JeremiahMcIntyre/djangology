@@ -19,8 +19,32 @@ def log_in(request):
             messages.error(request, 'Invalid username or password.')
     return render(request, 'player/login.html')
 
+def sign_up(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        display_name = request.POST.get('displayname')
+        print(f'username:{username}')
+        print(f'password:{password}')
+        print(f'displayname:{display_name}')
+
+        if Users.objects.filter(username=username).exists():
+            messages.error(request, 'Username is already taken.')
+            return redirect('sign_up')
+
+        user = Users.objects.create(username=username, password=password, userDisplayName=display_name)
+        print(user)
+
+        auth_login(request, user)
+        return redirect('playlists')
+
+    return render(request, 'player/signup.html')
+
 def playlists(request):
     return render(request, 'player/playlists.html')
+
+def sign_up_nav(request):
+    return render(request, 'player/signup.html')
 
 def play_song(request, song_name):
     song_path = os.path.join(settings.MEDIA_ROOT, song_name)

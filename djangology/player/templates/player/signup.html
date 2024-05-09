@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Djangology</title>
-    <link rel="stylesheet" type="text/css" href="signup.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}"  />
 </head>
 <body>
     <header>
@@ -15,7 +16,14 @@
     <main>
         <div class="signup-box">
             <h2>Sign Up Now!!</h2>
-            <form>
+            {% csrf_token %}
+            <div class="error-message">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+        </div>
+            <form method="post" action="{% url 'sign_up' %}">
+                {% csrf_token %}
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
 
