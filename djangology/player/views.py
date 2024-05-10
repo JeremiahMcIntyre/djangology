@@ -24,16 +24,12 @@ def sign_up(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         display_name = request.POST.get('displayname')
-        print(f'username:{username}')
-        print(f'password:{password}')
-        print(f'displayname:{display_name}')
 
         if Users.objects.filter(username=username).exists():
             messages.error(request, 'Username is already taken.')
             return redirect('sign_up')
 
         user = Users.objects.create(username=username, password=password, userDisplayName=display_name)
-        print(user)
 
         auth_login(request, user)
         return redirect('playlists')
