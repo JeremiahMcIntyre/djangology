@@ -36,6 +36,8 @@ def sign_up(request):
 
     return render(request, 'player/signup.html')
 
+
+
 def playlists(request):
     return render(request, 'player/playlists.html')
 

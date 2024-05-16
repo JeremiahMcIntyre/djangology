@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+
 driver = webdriver.Chrome()
 
 
@@ -35,6 +36,7 @@ try:
     time.sleep(2)
 
     signup_button.click()
+    time.sleep(2)
 
 
 except Exception as e:
